@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hang King</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="howOverlay" class="overlay overlay--visible">
+    <div class="how-box">
+        <h1 class="how-title">How to play:</h1>
+
+        <p class="how-text">
+            A secret word will appear as blank spaces.<br>
+            Type or click letters to guess them.<br><br>
+
+            Each wrong guess brings the stick figure closer<br>
+            to being “hanged.”<br><br>
+
+            You win if you reveal the full word before the figure<br>
+            is complete.<br><br>
+
+            Think carefully, every mistake counts!<br>
+            Your best score and last word are saved.
+        </p>
+
+        <button id="startBtn" class="btn-big">
+            CLICK TO CONTINUE
+        </button>
+    </div>
+</div>
+
+<div id="gameScreen" class="game-screen">
+
+    <div class="top-row">
+        <div class="left-area">
+            <div class="gallows">
+                <div class="gallows-frame"></div>
+                <div class="gallows-top"></div>
+                <div class="gallows-diagonal"></div>
+                <div class="gallows-rope"></div>
+                <img src="images/ice-king.png" alt="Ice King" class="ice-king" id="iceKing">
+            </div>
+
+            <div class="attempts-panel">
+                <div class="attempts-label">Remaining attempts</div>
+                <div class="attempts-value" id="attempts">6</div>
+            </div>
+            
+        </div>
+
+        <div class="center-area">
+            <h1 class="title">HANG KING</h1>
+            <p class="subtitle">Guess the word, letter by letter!</p>
+
+            <img src="images/ghost.png" alt="Ghost" class="ghost">
+
+            <div id="word" class="word"></div>
+        </div>
+
+        <div class="right-area">
+            <button id="howBtn" class="btn-how">How to play:</button>
+
+            <div class="score-box">
+                <div class="score-line">
+                    Score: <span id="score">0</span>
+                </div>
+
+                <div class="score-description">
+                    how many words<br>
+                    you guessed in a<br>
+                    row without<br>
+                    “hanging” Ice King
+                </div>
+
+                <div class="score-line">
+                    Best score: <span id="bestScore">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-area">
+        <div id="hintText" class="hint-text"></div>
+        <div id="keyboard" class="keyboard"></div>
+        <button id="randLetterBtn" class="btn-hint">give me a letter </button>
+        <button id="hintBtn" class="btn-hint">give me a hint</button>      
+    </div>
+
+</div>
+
+<script src="script/script.js"></script>
+</body>
+</html>
